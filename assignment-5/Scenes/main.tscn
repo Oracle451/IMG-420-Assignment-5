@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0vpmad5lyael"]
+
+[ext_resource type="PackedScene" uid="uid://pmtb4gvo61vg" path="res://Scenes/particle_system.tscn" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://bsrddvvuhfyjn" path="res://Scenes/physics_demo.tscn" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://b0pybmemvshwy" path="res://Scenes/player.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://cosahamknaib7" path="res://Scenes/laser_system.tscn" id="4_jjvhh"]
+
+[node name="Main" type="Node2D"]
+
+[node name="ParticleSystem" parent="." instance=ExtResource("1_jjgbg")]
+position = Vector2(328, 529)
+
+[node name="PhysicsDemo" parent="." instance=ExtResource("2_bo1nx")]
+position = Vector2(892, -26)
+
+[node name="Player" parent="." instance=ExtResource("3_8gbba")]
+
+[node name="LaserSystem" parent="." instance=ExtResource("4_jjvhh")]
+position = Vector2(13, 210)
+PlayerPath = NodePath("../Player")

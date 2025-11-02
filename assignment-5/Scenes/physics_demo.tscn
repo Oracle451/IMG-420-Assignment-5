@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsrddvvuhfyjn"]
+
+[ext_resource type="Script" uid="uid://bv235ne7eyn55" path="res://Scripts/PhysicsChain.cs" id="1_wuqm4"]
+[ext_resource type="PackedScene" uid="uid://bs2kd75iygqd0" path="res://Scenes/ChainSegment.tscn" id="2_607qx"]
+
+[node name="PhysicsDemo" type="Node2D"]
+script = ExtResource("1_wuqm4")
+SegmentScene = ExtResource("2_607qx")

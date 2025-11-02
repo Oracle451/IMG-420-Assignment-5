@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://pmtb4gvo61vg"]
+
+[ext_resource type="Shader" uid="uid://ccrfv8nywoqgh" path="res://Shaders/custom_particle.gdshader" id="1_5xl20"]
+[ext_resource type="Texture2D" uid="uid://ce1yg3mpdrej6" path="res://icon.svg" id="1_grq5i"]
+[ext_resource type="Script" uid="uid://bl5c8syoxad4r" path="res://Scripts/ParticleController.cs" id="1_lmuom"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xiea8"]
+shader = ExtResource("1_5xl20")
+shader_parameter/time = 0.0
+shader_parameter/wave_intensity = 0.1
+shader_parameter/color_start = Color(1, 0.5, 0, 1)
+shader_parameter/color_end = Color(1, 0, 0.5, 1)
+
+[node name="ParticleSystem" type="GPUParticles2D"]
+amount = 5
+texture = ExtResource("1_grq5i")
+lifetime = 2.5
+process_material = SubResource("ShaderMaterial_xiea8")
+script = ExtResource("1_lmuom")
