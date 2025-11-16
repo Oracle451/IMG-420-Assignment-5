@@ -27,4 +27,3 @@ void fragment() {
     // Apply final color with alpha
     COLOR = final_color;
 }
-
